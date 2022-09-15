@@ -501,7 +501,7 @@ if (weather == "rainy"){
   console.log(`No need for umbrella`)
 }
 
-weather == 'rainy' ? console.log(`Don't forget your umbrella`) : console.log(`No need for umbrella`)
+weather == 'rainy' ? console.log(`Don't forget your umbrella`) : console.log(`No need for umbrella`);
 
 // let Num = prompt(`enter a number`)
 // if (Num % 2 == 0){
