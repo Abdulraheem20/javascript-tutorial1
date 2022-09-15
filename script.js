@@ -51,7 +51,7 @@
 
 
 let age = 45
-const gravity = 9.81
+const gravity = 9.41
 let mass = 72
 const pi = 3.14
 const waterBoilingpoint = 100
@@ -96,7 +96,7 @@ let fn = 'Victor';
 let on =`Paul`;
 let ln = `omotaje`;
 
-console.log(fn + " " +on + " " + ln)
+console.log(fn +  on + " " + ln)
 console.log ( fn + " " + on + " " + ln  + " "  + 'is a good man')
 
 
@@ -110,7 +110,7 @@ let message2 = "it's a good morning in africa"
 console.log(message2)
 
 
-let lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nam pariatur optio repudiandae, eligendi \n\tnisi veniam saepe neque et quis. Doloremque iure odit laborum, illum minima et earum quibusdam esse ad vero, \n\tdicta quod adipisci perferendis nam error aut porro voluptas! Vel iste dolorem iure expedita voluptates natus, voluptate id."
+let lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nam pariatur optio repudiandae, eligendi \n\tnisi veniam saepe neque et quis. Doloremque iure odit laborum, illum minima et earum quibusdam esse ad vero, \ndicta quod adipisci perferendis nam error aut porro voluptas! Vel iste dolorem iure expedita voluptates natus, voluptate id."
 console.log(lorem)
 
 let js = 'javascript'
@@ -269,7 +269,7 @@ console.log(checkValue)
 checkValue = 4 < 3 || 5 < 2
 console.log(checkValue)
 
-// negative
+//  not equal is "!"
 let frt = !(4 > 3)
 console.log(frt)
 let rt = !(4 < 3)
@@ -311,10 +311,10 @@ document.getElementById('lasop1').innerHTML= 'Victor is in China'
 document.getElementById('lasop2').innerHTML= raimi.getFullYear()
 document.getElementById('lasop3').innerHTML= raimi.getDate()
 document.getElementById('lasop4').innerHTML= raimi.getHours()
-document.getElementById('lasop10').innerHTML= raimi.getMonth() + 1
-document.getElementById('lasop12').innerHTML= raimi.getDay()
-document.getElementById('lasop13').innerHTML= raimi.getTime()
-document.getElementById('lasop14').innerHTML= raimi.getMinutes()
+document.getElementById('lasop5').innerHTML= raimi.getMonth() + 1
+document.getElementById('lasop6').innerHTML= raimi.getDay()
+document.getElementById('lasop7').innerHTML= raimi.getTime()
+document.getElementById('lasop8').innerHTML= raimi.getMinutes()
 
 
 
@@ -326,9 +326,9 @@ const birthday4 = new Date(1995, 11, 17, 3, 24, 0)
 const birthday5 = new Date(628021800000) 
 
 
-document.getElementById('lasop4').innerHTML= birthday2
-document.getElementById('lasop5').innerHTML= birthday3
-document.getElementById('lasop6').innerHTML= birthday5
+document.getElementById('lasop9').innerHTML= birthday2
+document.getElementById('lasop10').innerHTML= birthday3
+document.getElementById('lasop11').innerHTML= birthday5
 
 
 const date1 = new Date("2020-05-12T23:50:21.817Z");
@@ -346,15 +346,15 @@ date1.toLocaleTimeString()     // 6:50:21 PM
 
 const date = new Date();
 console.log(date)
-const [month, day, year] = [date.getMonth(), date.getDate(), date.getFullYear()];
+const [month, day, year] = [date.getMonth() + 1, date.getDate(), date.getFullYear()];
 console.log(date)
 const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()];
 console.log(date)
 
-document.getElementById('lasop7').innerHTML= date
-document.getElementById('lasop8').innerHTML= [month, day, year]
-document.getElementById('lasop9').innerHTML= [hour, minutes, seconds]
-document.getElementById('lasop10').innerHTML= [month, day, year]
+document.getElementById('lasop12').innerHTML= date
+document.getElementById('lasop13').innerHTML= [month, day, year]
+document.getElementById('lasop14').innerHTML= [hour, minutes, seconds]
+document.getElementById('lasop15').innerHTML= [month, day, year]
 
 function testNum(a) {
     let result;
@@ -370,33 +370,33 @@ console.log(testNum(-5));
 
 // new date()
 const d = new Date();
-document.getElementById("demo3").innerHTML = d;
+document.getElementById("lasop16").innerHTML = d;
 
 //date(milliseconds)
 const d1 = new Date(1662360609007);
-document.getElementById("demo").innerHTML = d1;
+document.getElementById("lasop17").innerHTML = d1;
 
 //date string (the date must be in quotation)
 const d2 = new Date("2015-03-25");
-document.getElementById("demo1").innerHTML = d2;
+document.getElementById("lasop18").innerHTML = d2;
 
 // date format (YY,MM,DD,HH,MM,SS,MS)
 const d3 = new Date(2018, 11, 24, 10, 33, 30, 0);
-document.getElementById("demo2").innerHTML = d3;
+document.getElementById("lasop19").innerHTML = d3;
 
 // set full-year
 const d4 = new Date();
 d4.setFullYear(2020);
-document.getElementById("demo4").innerHTML = d4;
+document.getElementById("lasop20").innerHTML = d4;
 
 const d5 = new Date();
 d5.setFullYear(2020, 10, 3);
-document.getElementById("demo5").innerHTML = d5;
+document.getElementById("lasop21").innerHTML = d5;
 
 //set full year (6 months ago)
 const d6 = new Date();
 d6.setFullYear(d6.getFullYear(), d6.getMonth() - 6);
-document.getElementById("demo6").innerHTML = d6;
+document.getElementById("lasop22").innerHTML = d6;
 
 
 // if else, else if
@@ -432,14 +432,14 @@ if (time < 12) {
 } else {
   greeting = "Good evening";
 }
-document.getElementById("demo7").innerHTML = greeting;
+document.getElementById("lasop23").innerHTML = greeting;
 
 
 // class 05-09-2022
 // conditional statement;
 
 if(raimi.getFullYear() == 2022){
-  document.getElementById('lasop7').innerHTML = `The current year is 2022`
+  document.getElementById('lasop24').innerHTML = `The current year is 2022`
 }
 //syntax
 // if (condition) {
@@ -459,7 +459,7 @@ if (num1 > 50){
   console.log(`${num1} is less than 50`)
 }
 
-// if else if else
+// if, else if, else
 let a = 0;
 if (a > 0){
   console.log(`${a} is a positive number`)
@@ -846,22 +846,22 @@ function howMany(selectObject) {
 
 const btn = document.getElementById('btn');
 
-btn.addEventListener('click', () => {
-  const musicTypes = document.selectForm.musicTypes;
-  console.log(`You have selected ${howMany(musicTypes)} option(s).`);
-});
+// btn.addEventListener('click', () => {
+//   const musicTypes = document.selectForm.musicTypes;
+//   console.log(`You have selected ${howMany(musicTypes)} option(s).`);
+//});
 /////////////////////////////////////////////////////////////
 /////////////////ASSIGNMENTS SOLUTION//////////////////
 //Ass1//
 for (let grade = 0; grade <= 100; grade++){
   if(grade >= 80 ){
-    console.log(`${grade}: Grade A`); continue;
-  } if(grade >= 70){
-    console.log(`${grade}: Grade B`); continue;
-  } if(grade >= 60){
-    console.log(`${grade}: Grade C`); continue;
-  } if(grade >= 50){
-    console.log(`${grade}: Grade D`); continue;
+    console.log(`${grade}: Grade A`);
+  } else if(grade >= 70 && grade < 80 ){
+    console.log(`${grade}: Grade B`);
+  } else if(grade >= 60 && grade < 70){
+    console.log(`${grade}: Grade C`);
+  } else if(grade >= 50 && grade < 60){
+    console.log(`${grade}: Grade D`);
   } else{
     console.log(`${grade}: Grade F`); 
   } 
@@ -901,15 +901,18 @@ let Summer = [
 //   console.log(`Ohh! it's Autumn Season. Enjoy it!`);
 // };
 
+
+// if (userInput === 'september' || userInput == '')
+
 //Ass3//
-let ash = ['', '', '', '', '#', '##','###','####','#####','######', '#######'];
-let Ash = []
-for (let m = 0; m < ash.length; m++){
-  Ash.push(ash[m]);
-  if (m >= 4){
-    console.log(`${m}-      ${Ash[m]}`)
-  }
-} 
+// let ash = ['', '', '', '', '#', '##','###','####','#####','######', '#######'];
+// let Ash = []
+// for (let m = 0; m < ash.length; m++){
+//   Ash.push(ash[m]);
+//   if (m >= 4){
+//     console.log(`${m}-      ${Ash[m]}`)
+//   }
+// } 
 // let r = 4
 // while(r < ash.length){
 //   Ash.push(ash[r]);
@@ -984,9 +987,11 @@ let fruit =[
   'mango',
   'lemon'
 ]
+let fruitReverse = []
 for (let i = fruit.length - 1; i >= 0; i--){
-  console.log(fruit[i]);
-};
+  fruitReverse.push(fruit[i]);
+}; 
+console.log(fruitReverse);
 //Ass11//
 //countries = [
 //   'Albania',
@@ -1000,3 +1005,280 @@ for (let i = fruit.length - 1; i >= 0; i--){
 //   'Japan',
 //   'Kenya'
 // ]
+
+// let longestCountry = 0;
+// let thecountry = 0;
+// for(let i = 0; i < countries.length; i++){
+//   if (countries[i].length > longestCountry){
+//     longestCountry = countries[i].length;
+    
+//   }  
+// } console.log(longestCountry)
+// Ass11.6//
+
+// //let emptyArr =[]
+// for( let i = 0; i < Countries.length; i++){
+//   emptyArr.push(Countries[i].toUpperCase())
+// }
+// //
+let reverseCountry = []
+let reverseCapital = []
+for(i = countries.length -1; i > 0; i--){
+  reverseCountry.push(countries[i].toUpperCase());
+  
+} console.log(reverseCountry)
+
+
+
+let today = new Date().getHours();
+if(today < 12){
+  document.getElementById('time').innerHTML= `Goodmorning`
+} else if(today <= 12 && today < 16 ){
+  document.getElementById('time').innerHTML= `Good afternoon`
+} else if(today <= 16 && today < 19){
+  document.getElementById('time').innerHTML= `Good evening`
+} else{
+  document.getElementById('time').innerHTML= `Good night`
+}
+let newCountries = [];
+for(let i = 0; i < countries.length; i++){
+  if(countries[i].includes('land')){
+    newCountries.push(countries[i])
+  }
+} console.log(newCountries);
+
+for(let i = 0; i <= 7; i++){
+  console.log('#'.repeat(i));
+};
+
+let fourChar = [];
+for(let i = 0; i < countries.length; i++){
+  if (countries[i].length >= 4){
+
+  }
+}
+
+
+////////////12/09/2022//////////////
+//function with a parameter and return keyword
+function add(a){
+  let b = 10;
+  console.log(a + b);
+}
+add(2); // 2 is parameter; while a is argument;
+
+function addNum(a, b){
+  c = a * b;
+  console.log(c)
+}
+addNum(25, 4);
+addNum(30, 5);
+addNum(35, 6);
+addNum(40, 7);
+
+function multiplyNum(a, b, c){
+  let result = a * b + c;
+  return result;
+}
+console.log(multiplyNum(3, 5, 8));
+console.log(multiplyNum(3, 5, 8));
+console.log(multiplyNum(3, 5, 8));
+console.log(multiplyNum(3, 5, 8));
+
+function areaCircle(r){
+  let pi = 22/7;
+  let area = pi * r * r;
+  return area.toFixed(2)
+}
+console.log(areaCircle(3));
+
+function fizbuz(){
+  for(let i = 1; i <= 100; i++){
+    if (i%2 === 0 && i % 5 === 0){
+      console.log(`${i}: Fizzbuzz`)
+    } else if(i % 3 === 0){
+      console.log(`${i}: buzz`)
+    } else if( i % 2 === 0){
+      console.log(`${i}: fizz`)
+    } else{
+      console.log(i)
+    }
+    
+  }
+} 
+fizbuz()
+
+let number = [3,4,4,2,6,7,8,41,8]
+//let v = (number.length)
+function sumUp(arr){
+  let sum = 0;
+  for(let i = 0; i < arr.length; i++){
+    sum += arr[i]
+  }
+  return sum;
+}
+console.log(sumUp(number));
+console.log(sumUp(numbers));
+
+//ARROW FUNCTION//
+const humble=()=>{
+  let name = 'Humble'
+  let lastName = "Alao"
+  return `${name} ${lastName}`
+}
+console.log(humble());
+
+
+const rand=(a)=>{
+  let random = [];
+  for(let i = 0; i <= 5; i++){
+    let randomNumber = Math.floor(Math.random() * 100 + 1);
+    if (random.length < i){
+      random.push(randomNumber)
+    }
+  }
+  return random;
+} 
+console.log(rand())
+
+//////////////////// 13-09-2022 ////////////////////////
+const square = function(n){
+  return n * n;
+};
+console.log(square(6));
+
+let username = document.getElementById('username')
+let form = document.getElementById("form")
+let button = document.getElementById("btn")
+let msg = document.getElementById('message')
+
+
+
+btn.addEventListener('click', (e)=>{
+  e.preventDefault()
+  if(username.value){
+    let today = new Date().getHours();
+  if(today < 12){
+    msg.innerHTML = `${username.value}, Good morning`;
+  } else if(today <= 12 && today < 16 ){
+    msg.innerHTML = `${username.value}, Good afternoon`;
+  } else if(today <= 16 && today < 19){
+    msg.innerHTML = `${username.value}, Good evening`;
+  } else{
+    msg.innerHTML = `${username.value}, Good night`;
+  }
+  }
+  username.value = '';
+  });
+
+
+
+
+//////////////// JAVASCRIPT OBJECT ////////////////////
+
+const person = {
+  name: 'John',
+  lastname: 'Doe',
+  sex: 'male',
+  jobTitle: 'Software Developer',
+}
+/// we add a new key and value to an existing object by doing this; 
+person.country = "Nigeria"
+
+
+// access values of object using the key name./////
+console.log(person);
+console.log(person.name);
+console.log(person.jobTitle);
+
+// access values of object using the square bracket and quote///
+console.log(person['sex']);
+console.log(person['jobTitle']);
+
+const rectangle = {
+  length: 20,
+  width: 50
+}
+
+const student = [
+  {
+    name: "Raimi",
+    age: 18,
+    sex: "male",
+    skin: "chocolate"
+  },
+  {
+    name: "Humble",
+    age: 19,
+    sex: "male",
+    skin: "fair"
+  },
+  {
+    name: "Victor",
+    age: 20,
+    sex: "male",
+    skin: "chocolate"
+  },
+  {
+    name: "Samuel",
+    age: 22,
+    sex: "male",
+    skin: "yellow"
+  },
+];
+console.log(student[0].name);
+console.log(student[1].name);
+console.log(student[2].name);
+console.log(student[3].name);
+
+let names = [];
+for(let i = 0; i < student.length; i++){
+  names.push(student[i].name)
+}
+console.log(names);
+
+/////////// HIGHER ORDER FUNCTION ////////////
+function callback(n){
+  return n * 2;
+}
+
+function cube(callback, n){
+  return callback(n) * n;
+}
+
+console.log(cube(callback, 3));
+
+const sumNumber =(arr)=>{
+  let sum = 0;
+  const callback = function(element){
+    sum += element
+  }
+  arr.forEach(callback)
+  return sum
+}
+console.log(sumNumber(number));
+console.log(sumNumber(numbers));
+
+
+///////////////// Setting time //////////////////////
+///// setTimeOut //
+///// setInterval
+
+
+
+const greetings=(name ="Humble", time="Afternoon")=>{
+  let humble = `Welcome ${name}, Good ${time}`;
+  // document.getElementById('demo8').innerHTML = humble
+    console.log(i, humble)
+  
+  //return humble
+}
+
+// greetings();
+setTimeout(greetings, 3000);
+// setInterval(greetings, 3000);
+
+// setTimeout((name ="Humble", time="Afternoon")=>{
+//   let humble = `Welcome ${name}, Good ${time}!`;
+//   document.getElementById('demo8').innerHTML = humble
+// }, 3000)
