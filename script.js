@@ -501,7 +501,7 @@ if (weather == "rainy"){
   console.log(`No need for umbrella`)
 }
 
-weather == 'rainy' ? console.log(`Don't forget your umbrella`) : console.log(`No need for umbrella`);
+weather == 'rainy' ? console.log(`Don't forget your umbrella`): console.log(`No need for umbrella`);
 
 // let Num = prompt(`enter a number`)
 // if (Num % 2 == 0){
@@ -513,7 +513,7 @@ weather == 'rainy' ? console.log(`Don't forget your umbrella`) : console.log(`No
 
 let A = 10;
 let B = 20;
-B > A ? console.log('B is greater than A'): console.log('A is less than B')
+B > A ? console.log('B is greater than A'): console.log('A is greater than B')
 
 // Nested conditional statement
 let register = true;
@@ -543,7 +543,7 @@ switch(weather2){
   case 'snowy':
     console.log(`Don't forget your rain coat`)
     break
-  default: 
+  default:
     console.log(`No need for anything`)
 }
 
@@ -591,12 +591,13 @@ console.log(str[2])
 console.log(str[3])
 
 // length of an array
-console.log(str.length)
-console.log(numbers.length -1)
+console.log(str.length) //length of an array 
+console.log(numbers.length -1)// last index of an array
 
-str[0] = 'samuel'
-str[3] = 'tayo'
-str[6] = 654
+// changing the value in an array
+str[0] = 'samuel' // replaced what's in index [0];
+str[3] = 'tayo' // replaced what's in index [3];
+str[6] = 654  // replaced what's in index [6];
 console.log(str)
 
 //methods of array
@@ -613,7 +614,9 @@ console.log(classlist.toString())
 
 let newArray = classlist.concat(numbers)
 console.log(newArray)
+
 console.log(classlist.slice(0,3))
+console.log(classlist.slice())
 console.log(classlist.join())
 console.log(classlist.join(''))
 console.log(classlist.join(' '))
@@ -645,23 +648,23 @@ let classlist3 = ['Raimi', 'Humble', 'Tunde', 'Samuel', 'Victor', 'Isaac']
 // }
 
 
-//classlist.push('okeoghene') //.push add an array to the last
-//console.log(classlist)
-//
-//classlist.pop() // .pop remove the last item in the array
-//console.log(classlist)
-//
-//classlist.shift() // .shift remove the first item(0 index) 
-//console.log(classlist)
-//
-//classlist.unshift('raimi') // .unshift add a new item to the first (0)  //index of an array
-//console.log(classlist)
+classlist.push('okeoghene') //.push add an array to the last
+console.log(classlist)
 
-// classlist.reverse() // .Reverses the elements in an array in place.
-//console.log(classlist.reverse())
+classlist.pop() // .pop remove the last item in the array
+console.log(classlist)
 
-// classlist.sort() //.sort rearrange array alphabetically
-//console.log(classlist.sort())
+classlist.shift() // .shift remove the first item(0 index) 
+console.log(classlist)
+
+classlist.unshift('raimi') // .unshift add a new item to the first (0)  //index of an array
+console.log(classlist)
+
+classlist.reverse() // .Reverses the elements in an array in place.
+console.log(classlist.reverse())
+
+classlist.sort() //.sort rearrange array alphabetically
+console.log(classlist.sort())
 
 //ASSIGNMENT SOLUTION
 const shoppingCart = ['Milk', 'Coffee','Tea', 'Honey']
@@ -708,7 +711,7 @@ console.log(Math.min(...ages))
 
 // LOOP
 //FOR LOOP
-for(let i = 1; i < 50; i++){
+for(let i = 1; i <= 50; i++){
   console.log(i)
 }
 for(let i = 0; i < classlist.length; i++){
@@ -741,12 +744,19 @@ for( let i = 0; i < Countries.length; i++){
 console.log(emptyArr)
 let sum = 0;
 for(let e = 1; e <= 10; e++){
-  sum = sum + e
+  sum += e
   console.log(sum)
 }
 console.log(sum)
 //ass
 // use for loop to iterate btw 0 and 100; print the sum of all even numbers
+let sum100 = 0;
+for (let i = 1; i <= 100; i++){
+  sum100 += i;
+  console.log(sum100)
+}
+console.log(sum100);
+
 for(let i = 10; i >= 0; i--){
   console.log(i)
 }
@@ -804,7 +814,7 @@ let leng = 0;
 
 //////////////////////////////////////////////////////
  
-    let fruitType1 = ['Oranges',' Apples', 'Bananas', ' Cherries', 'Mangoes', 'Papayas']
+    // let fruitType1 = ['Oranges',' Apples', 'Bananas', ' Cherries', 'Mangoes', 'Papayas']
     let fruitType = 'Cherries';
 
 switch (fruitType) { 
@@ -834,17 +844,17 @@ console.log("Is there anything else you'd like?");
 //////////////////////////////////////////////////////////
 ///////////LOOP ITERATION (MDN)//////////////////////////
 
-function howMany(selectObject) {
-  let numberSelected = 0;
-  for (let i = 0; i < selectObject.options.length; i++) {
-    if (selectObject.options[i].selected) {
-      numberSelected++;
-    }
-  }
-  return numberSelected;
-}
+// function howMany(selectObject) {
+//   let numberSelected = 0;
+//   for (let i = 0; i < selectObject.options.length; i++) {
+//     if (selectObject.options[i].selected) {
+//       numberSelected++;
+//     }
+//   }
+//   return numberSelected;
+// }
 
-const btn = document.getElementById('btn');
+// const btn = document.getElementById('btn');
 
 // btn.addEventListener('click', () => {
 //   const musicTypes = document.selectForm.musicTypes;
@@ -926,19 +936,19 @@ for (let p =0; p<= 10; p++){
 //Ass5//
 let addUp = 0;
 for (let i = 0; i<= 100; i++){
-  addUp = addUp + i
+  addUp += i
 } console.log(addUp);
 //Ass6//
 let evenSum = 0;
 let oddSum = 0;
 for (let i = 0; i<= 100; i++){
   if(i % 2 == 0){
-    evenSum = evenSum+ i
+    evenSum +=  i
   }
   if(i % 2 == 1){
-    oddSum = oddSum + i
+    oddSum += i
   }
-}console.log(oddSum);
+}console.log(oddSum, evenSum);
 //Ass7//
 let oddEven = []
 oddEven.push(evenSum, oddSum);
@@ -1021,12 +1031,12 @@ console.log(fruitReverse);
 //   emptyArr.push(Countries[i].toUpperCase())
 // }
 // //
-let reverseCountry = []
-let reverseCapital = []
+let reverseCountry = [];
+//let reverseCapital = []
 for(i = countries.length -1; i > 0; i--){
   reverseCountry.push(countries[i].toUpperCase());
   
-} console.log(reverseCountry)
+} console.log(reverseCountry);
 
 
 
@@ -1065,11 +1075,11 @@ function add(a){
   let b = 10;
   console.log(a + b);
 }
-add(2); // 2 is parameter; while a is argument;
+add(2); // 2 is argument; while a is parameter;
 
 function addNum(a, b){
   c = a * b;
-  console.log(c)
+  console.log(c);
 }
 addNum(25, 4);
 addNum(30, 5);
@@ -1080,10 +1090,10 @@ function multiplyNum(a, b, c){
   let result = a * b + c;
   return result;
 }
-console.log(multiplyNum(3, 5, 8));
-console.log(multiplyNum(3, 5, 8));
-console.log(multiplyNum(3, 5, 8));
-console.log(multiplyNum(3, 5, 8));
+console.log(multiplyNum(3, 5, 7));
+console.log(multiplyNum(4, 6, 8));
+console.log(multiplyNum(5, 7, 9));
+console.log(multiplyNum(6, 8, 10));
 
 function areaCircle(r){
   let pi = 22/7;
@@ -1282,3 +1292,136 @@ setTimeout(greetings, 3000);
 //   let humble = `Welcome ${name}, Good ${time}!`;
 //   document.getElementById('demo8').innerHTML = humble
 // }, 3000)
+
+//classwork//
+// let username = document.getElementById('username')
+// let form = document.getElementById("form")
+// let button = document.getElementById("btn")
+// let msg = document.getElementById('message')
+
+
+
+// btn.addEventListener('click', (e)=>{
+//   e.preventDefault()
+//   if(username.value){
+//     let today = new Date().getHours();
+//   if(today < 12){
+//     msg.innerHTML = `${username.value}, Good morning`;
+//   } else if(today <= 12 && today < 16 ){
+//     msg.innerHTML = `${username.value}, Good afternoon`;
+//   } else if(today <= 16 && today < 19){
+//     msg.innerHTML = `${username.value}, Good evening`;
+//   } else{
+//     msg.innerHTML = `${username.value}, Good night`;
+//   }
+//   }
+//   username.value = '';
+//   });
+//
+const email = document.getElementById('email');
+const form1 = document.getElementById('form1');
+const submitButton = document.getElementById('submitEmail');
+let empArr = [];
+
+const password = document.getElementById('password');
+const submitPassword = document.getElementById('submitPassword');
+submitEmail.addEventListener('click', (e)=>{
+  e.preventDefault();
+  empArr.push(`email: ${email.value}`);
+  console.log(empArr);
+  // console.log(email.value);
+  email.value = '';
+});
+
+submitPassword.addEventListener('click', (e)=>{
+  e.preventDefault();
+  empArr.push(`password: ${password.value}`);
+  // console.log(password.value);
+  console.log(empArr);
+  password.value = '';
+});
+// console.log(empArr);
+
+// for (let i = 0; i < empArr.length; i++){
+
+// } //calsswork correction //
+
+
+
+// for each
+// .map
+// .filter
+// .sort
+let sumArray2 = 0;
+let sumArray3 = 0;
+
+numbers.forEach((element, index, arr)=>{
+  //console.log(`${index}: ${element} separated ///${array}`);
+  sumArray2 += element;
+  let multiply = element * 3;
+  console.log(multiply)
+
+})
+console.log(sumArray2);
+console.log(sumArray3);
+
+
+let county = []
+countries.forEach((element)=>{
+  county.push(element.toUpperCase());
+  console.log(element.toUpperCase());
+
+}); console.log(county);
+
+// .map
+let mapArray = numbers.map((e, i)=>{
+  return e * e;
+});
+console.log(mapArray);
+let newCountry = countries.map((e, i)=>{
+  return e.toUpperCase();
+});
+console.log(newCountry);
+
+// .sort
+console.log(numbers.sort()); // wrong for number
+console.log(numbers.sort((a, b)=>{
+  return a-b
+}));
+console.log(numbers.sort((a, b)=>{
+  return b-a
+}));
+
+// .filter
+
+let personNew = [
+  {
+    name: "Raimi",
+    age: 18,
+    sex: "male",
+    skin: "chocolate"
+  },
+  {
+    name: "Humble",
+    age: 19,
+    sex: "male",
+    skin: "afin"
+  },
+  {
+    name: "Victor",
+    age: 20,
+    sex: "male",
+    skin: "brown"
+  },
+  {
+    name: "Samuel",
+    age: 17,
+    sex: "male",
+    skin: "yellow"
+  },
+];
+
+let personResult = personNew.filter( (ele)=>{
+  return ele.age >18
+});
+console.log(personResult);
