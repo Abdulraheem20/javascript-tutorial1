@@ -1256,7 +1256,7 @@ function cube(callback, n){
   return callback(n) * n;
 }
 
-console.log(cube(callback, 3));
+console.log(cube(callback, ));
 
 const sumNumber =(arr)=>{
   let sum = 0;
@@ -1356,7 +1356,7 @@ let sumArray2 = 0;
 let sumArray3 = 0;
 
 numbers.forEach((element, index, arr)=>{
-  //console.log(`${index}: ${element} separated ///${array}`);
+  console.log(`${index}: ${element} separated ///${arr}`);
   sumArray2 += element;
   let multiply = element * 3;
   console.log(multiply)
@@ -1374,20 +1374,20 @@ countries.forEach((element)=>{
 }); console.log(county);
 
 // .map
-let mapArray = numbers.map((e, i)=>{
-  return e * e;
+let mapArray = numbers.map((b, i)=>{
+  return b * b;
 });
 console.log(mapArray);
-let newCountry = countries.map((e, i)=>{
+let newCountry = countries.map((e)=>{
   return e.toUpperCase();
 });
 console.log(newCountry);
 
 // .sort
 console.log(numbers.sort()); // wrong for number
-console.log(numbers.sort((a, b)=>{
+let numberNew = numbers.sort((a, b)=>{
   return a-b
-}));
+}); console.log(numberNew);
 console.log(numbers.sort((a, b)=>{
   return b-a
 }));
@@ -1425,3 +1425,170 @@ let personResult = personNew.filter( (ele)=>{
   return ele.age >18
 });
 console.log(personResult);
+
+
+
+/////// 
+function makeUser(name, age, job, sex, address) {
+  return {
+    name: name,
+    age: age,
+    job: job,
+    sex: sex,
+    address: address,
+    // ...other properties
+  };
+}
+
+let user = makeUser("John", 30, "Engineer", "male", "Lagos",);
+console.log(user.address); 
+
+function makeUser(name, age, job, sex, address) {
+  return {
+    name,
+    age,
+    job,
+    sex,
+    address,
+    // ...other properties
+  };
+}
+
+let user2 = makeUser("John", 30, "Engineer", "male", "Lagos",);
+console.log(user2.job); 
+
+user.class = 'year1';
+console.log(user);
+user.name = 'Taiwo';
+console.log(user);
+delete user.name;
+console.log(user);
+
+////////////////////// 19-09-2022 /////////////////////////
+let applicants =[
+  {firstName: 'John', lastName:'Doe', favourite_color: 'white', age: 20, qualification: 'SSCE', experience:6},
+  {firstName: 'Peter', lastName: 'Piper', favourite_color: 'blue', age: 17, qualification: 'OND', experience:5},
+  {firstName: 'Angela', lastName: 'Okorie', favourite_color: 'green', age: 17, qualification: 'OND', experience:5},
+  {firstName: 'Stella', lastName: 'Damascus', favourite_color: 'Red', age: 17, qualification: 'OND', experience:5},
+  {firstName: 'Emeka', lastName: 'Ike', favourite_color: 'white', age: 28, qualification: 'SSCE', experience:4},
+  {firstName: 'Liquor', lastName: 'Rose', favourite_color: 'yellow', age: 17, qualification: 'OND', experience:0},
+  {firstName: 'White', lastName: 'Money', favourite_color: 'white', age: 30, qualification: 'SSCE', experience:10},
+  {firstName: 'Precious', lastName: 'Agunbiade', favourite_color: 'white', age: 25, qualification: 'SSCE', experience:5}
+];
+
+// age > 18 & favColor white
+let age_ColorWhite = applicants.filter((element) =>{
+  return element.age > 18 && element.favourite_color == 'white'
+});
+document.getElementById('lasop30').innerHTML = JSON.stringify(age_ColorWhite);
+//localStorage.setItem('element', JSON.stringify(age_ColorWhite))
+
+console.log(age_ColorWhite);
+
+//destructuring and spread operator
+
+//let Countries = [
+//   'nigeria', 'togo', 'sierra leone', 'ghana', 'congo', 'chile'
+// ]
+let [one, two, three, four, five, six, seven, eight, nine,] = Countries;
+
+console.log(one);
+console.log(two);
+console.log(three);
+console.log(four);
+
+
+
+let fullStack = [['HTML','CSS', 'JS', 'React', 'Redux',], ['Node','Express', 'MongoDB', 'SQL', 'python']];
+let [frontEnd1, backEnd1] = fullStack;
+console.log(frontEnd1);
+console.log(backEnd1);
+
+const rectangle1 = {
+  width: 20,
+  height: 40,
+  area: 800,
+};
+
+// const {width, height, area} = rectangle1;
+// console.log(width)
+
+//OR 
+const {width:w, height:h, area:ar,} = rectangle1;
+console.log(ar);
+
+
+// spread or rest operator
+let [yatch, boat, ...rest] = Countries; // rest can be anything. Also, we must not have beyond or below 3dots(...)
+console.log(yatch);
+console.log(boat);
+console.log(rest);
+
+///////////// JAVASCRIPT CLASS /////////////
+/*
+In javascript, a classs is a template to create an Object. A class is not an Object. We need to instatiate a class to create an Object.
+To use javascript class, we need constructor.;
+*/
+class LasopStudent {
+
+}; console.log(LasopStudent);
+const stud1 = new LasopStudent();
+console.log(stud1);
+
+
+class SomePerson{
+  constructor (name= "Isaac", year= 1999, username= "merlin", password= "123456"){
+    this.name = name
+    this.birthyear = year
+    this.username = username
+    this.password = password
+    this.current = new Date().getFullYear();
+  }
+
+  getPersonDetails(){
+    return `My name is ${this.name}, and I am ${this.current - this.birthyear } years old. My username is ${this.username} and ${this.password} is my password.`
+  }
+
+}
+// console.log(new SomePerson('Humble', 2000, 'humblenation', '123456'));
+let humble2 = new SomePerson('Humble', 2000, 'humblenation', '123456');
+console.log(humble2.getPersonDetails());
+let taiwo = (new SomePerson('Taiwo', 1990, 'tboy', '5678890'));
+console.log(taiwo.getPersonDetails());
+
+////////////// CLASS METHODS //////////////
+console.log(humble2.getPersonDetails());
+console.log(new SomePerson().getPersonDetails());
+
+///////////////////////////////////////
+
+let database = [];
+let username2 = document.getElementById('username2');
+let password2 = document.getElementById('password2');
+let email2 = document.getElementById('email2');
+const saveData = () =>{
+
+  
+}
+
+let trial = document.getElementById('trial')
+let submit = document.getElementById('trial-btn')
+trial.addEventListener('submit', (e)=>{
+  e.preventDefault();
+  class InputData{
+    constructor(username, email, password){
+      this.username2 = username;
+      this.email = email;
+      this.password = password;
+    };
+  }
+
+  if(username2.value && password2.value && email2.value){
+    let detail = new InputData(username2.value, email2.value, password2.value);
+    database.push(detail);
+  }
+  username2 = ''
+  email2 = ''
+  password2 = ''
+  console.log(database)
+})
