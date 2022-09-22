@@ -1342,11 +1342,26 @@ submitPassword.addEventListener('click', (e)=>{
 });
 // console.log(empArr);
 
-// for (let i = 0; i < empArr.length; i++){
+////////////////// calsswork correction //////////////////
 
-// } //calsswork correction //
-
-
+let arry =[]
+form.addEventListener("submit", e =>{
+      e.preventDefault();
+      let email = document.querySelector('#ai')
+      let pwd = document.querySelector('#pr')
+      if(pwd.value){
+      let item = {}
+      item ["password"] = pwd.value;
+      item ["email"] = email.value;
+      arry.push(item);
+        // arry.push(pwd)
+      }
+      pwd.value = '';
+      email.value='';
+      console.log(arry)
+    })
+///////////////////////////////////////////////////
+console.log(arry);
 
 // for each
 // .map
@@ -1566,9 +1581,11 @@ let database = [];
 let username2 = document.getElementById('username2');
 let password2 = document.getElementById('password2');
 let email2 = document.getElementById('email2');
-const saveData = () =>{
 
-  
+if (username2.value === ""){
+  document.getElementById('trial-btn').disabled = true;
+}else{
+  document.getElementById('trial-btn').disabled = false;
 }
 
 let trial = document.getElementById('trial')
@@ -1592,3 +1609,83 @@ trial.addEventListener('submit', (e)=>{
   password2 = ''
   console.log(database)
 })
+
+/////////////////
+
+const cloneApplicants = {};
+for (let key in applicants){
+  cloneApplicants[key] = applicants[key];
+}; console.log(cloneApplicants); // note that KEY could be anything.
+
+// using object.assign (Object.assign(destination, source1[, source2, source3..., sourceN]))
+const objectAssign = {};
+Object.assign(applicants, student);
+console.log(applicants);
+
+
+//////// 22-09-2022 //////////////
+let dom = document.getElementById('dom');
+console.log(dom);
+let text = document.createElement('h1');
+text.innerHTML = 'this text is created using dom manipulation';
+text.className= 'text';
+text.style.fontStyle = 'italic';
+text.style.fontSize = '50px';
+text.style.color = 'orange'
+dom.append(text);
+
+let doms = document.getElementsByClassName('doms');
+console.log(doms);
+
+
+let doms2 = document.getElementsByName('doms');
+console.log(doms2);
+let doms3 = document.querySelector('.doms3');
+let doms4 = document.querySelector('#doms4');
+console.log(doms3, doms4);
+
+let testing = document.querySelectorAll('.testing')
+let newtesting = testing[0].classList.add = "testing-1";
+let newtesting2 = testing[1].classList.remove = "testing";
+console.log(newtesting);
+let testing2 = document.querySelector('.testing')
+console.log(testing, testing2);
+
+let h1 = document.querySelector('#h1');
+h1.setAttribute('class', 'heading');
+console.log(h1);
+
+let img = document.querySelector('.img');
+img.setAttribute('src', './images/profile-pic (2).png');
+img.setAttribute('style', 'width: 50px');
+
+document.getElementById('innerHtml').innerHTML = '<h1> Heading tag </h1>'
+
+document.getElementById('textContent').textContent = 'Heading tag' // cannot pass html tags
+
+document.getElementById('innerText').innerText = '<h1> Heading tag </h1>' // cannot pass html tags
+
+let container = document.querySelector('.container h1');
+container.textContent = 'Humble get out of our class, now!';
+container.style.color = 'green';
+container.style.backgroundColor = 'orange';
+// container.style.textAlign: center; = 'orange';
+
+let wrapper = document.querySelectorAll('.wrapper h3')
+for(i=1; i < wrapper.length; i++){
+  if (i % 2 == 0){
+    wrapper[i].textContent = 'I am red because I am even';
+    wrapper[i].style.backgroundColor = "green"
+  } else {
+    wrapper[i].textContent = 'I am blue because I am odd';
+    wrapper[i].style.backgroundColor = 'yellow'
+
+  }
+}
+
+let victor = document.querySelector('.victor');
+let content = document.createElement('img');
+content.setAttribute('src', './images/profile-pic (1).png');
+content.setAttribute('alt', 'my pics');
+victor.append(content);
+
