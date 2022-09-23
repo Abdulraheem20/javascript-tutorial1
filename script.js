@@ -1689,3 +1689,5 @@ content.setAttribute('src', './images/profile-pic (1).png');
 content.setAttribute('alt', 'my pics');
 victor.append(content);
 
+let numbe = document.querySelectorAll('.numbe');
+for( i = 1; i <= numbe.length; i++)
