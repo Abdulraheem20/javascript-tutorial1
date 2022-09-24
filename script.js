@@ -1671,7 +1671,7 @@ container.style.color = 'green';
 container.style.backgroundColor = 'orange';
 // container.style.textAlign: center; = 'orange';
 
-let wrapper = document.querySelectorAll('.wrapper h3')
+let wrapper = document.querySelectorAll('.wrapper')
 for(i=1; i < wrapper.length; i++){
   if (i % 2 == 0){
     wrapper[i].textContent = 'I am red because I am even';
@@ -1689,5 +1689,31 @@ content.setAttribute('src', './images/profile-pic (1).png');
 content.setAttribute('alt', 'my pics');
 victor.append(content);
 
-let numbe = document.querySelectorAll('.numbe');
-for( i = 1; i <= numbe.length; i++)
+// let div = document.querySelector('.num-100');
+// div.style.dislay = 'grid';
+// div.style.gridTemplateColumns = 'auto auto auto auto';
+// div.style.border = '1px';
+// div.style.borderRadius = '1px';
+////Ass
+for(i = 1; i <= 100; i++){
+  let values100 = document.createElement('h1');
+  // let div = document.querySelectorAll('#divContainer');
+  // div.style.dislay = 'grid';
+  // div.style.gridTemplateColumns = '1fr 1fr 1fr 1fr';
+
+  values100.style.textAlign = 'center';
+  values100.style.width = '100px';
+  values100.style.height = '100px';
+  values100.style.paddingTop = '50px';
+  // values100.style.display = 'inline';
+  // values100.style.justifyContent = 'spaceBetween'
+
+  document.getElementById('divContainer').appendChild(values100);
+  if(i % 2 == 0){
+  values100.textContent = i;
+  values100.style.backgroundColor = 'green';
+ } else{
+  values100.textContent = i;
+  values100.style.backgroundColor = 'yellow';
+};
+};
