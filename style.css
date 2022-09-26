@@ -3,11 +3,7 @@
     margin-top: 20px;
     
 }
-.num-100{
-    background-color: black;
+/* .num-100{
     display: grid;
-    justify-content: space-around;
-    grid-template-columns: auto auto auto auto auto;
-    gap: 10px;
-    border: 1px solid black;
-}
+    justify-content: space-around;   
+} */

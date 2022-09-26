@@ -1689,22 +1689,29 @@ content.setAttribute('src', './images/profile-pic (1).png');
 content.setAttribute('alt', 'my pics');
 victor.append(content);
 
-// let div = document.querySelector('.num-100');
-// div.style.dislay = 'grid';
-// div.style.gridTemplateColumns = 'auto auto auto auto';
-// div.style.border = '1px';
-// div.style.borderRadius = '1px';
-////Ass
-for(i = 1; i <= 100; i++){
-  let values100 = document.createElement('h1');
-  // let div = document.querySelectorAll('#divContainer');
-  // div.style.dislay = 'grid';
-  // div.style.gridTemplateColumns = '1fr 1fr 1fr 1fr';
 
+/////////////     ASS     //////////////////
+let div = document.querySelector('.num-100');
+// let div = document.getElementById('divContainer');
+div.style.backgroundColor = 'black';
+div.style.display = 'grid';
+// div.style.justifyContent = 'spaceAround'
+// div.style.gap = '10px';
+div.style.gridTemplateColumns = '1fr 1fr 1fr 1fr 1fr';
+div.style.border = '10px solid red';
+div.style.borderRadius = '30px';
+div.style.paddingLeft = '50px';
+div.style.paddingRight = '50px';
+
+
+for(i = 1; i <= 100; i++){
+  let values100 = document.createElement('span');
   values100.style.textAlign = 'center';
   values100.style.width = '100px';
   values100.style.height = '100px';
-  values100.style.paddingTop = '50px';
+  values100.style.padding = '50px';
+  values100.style.fontSize = '50px'
+  values100.style.border = '10px solid white'
   // values100.style.display = 'inline';
   // values100.style.justifyContent = 'spaceBetween'
 
@@ -1717,3 +1724,13 @@ for(i = 1; i <= 100; i++){
   values100.style.backgroundColor = 'yellow';
 };
 };
+
+/////// 26-09-2022 ///////////////////
+///////EVENTS
+let click = document.getElementById('click');
+let inpuValue = document.getElementById('event');
+let h1Value = document.querySelector('.event h1');
+
+click.addEventListener('onkeydown', ()=> {
+   h1Value.innerHTML = inpuValue.value;
+})
