@@ -1733,4 +1733,59 @@ let h1Value = document.querySelector('.event h1');
 
 click.addEventListener('onkeydown', ()=> {
    h1Value.innerHTML = inpuValue.value;
+});
+
+
+let myImages = document.querySelectorAll('.images img');
+console.log(myImages);
+
+let show = document.querySelector('.display .img-display img');
+console.log(show);
+
+for(let i = 0; i<myImages.length; i++){
+  myImages[i].addEventListener('click', ()=> {
+    show.setAttribute('src', myImages[i].src)
+  })
+}
+
+
+// let todoInput = document.querySelector('.to-do input');
+// let todoBtn = document.querySelector('.to-do button');
+// let todoUl = document.querySelector('.to-do ul');
+
+
+// todoBtn.addEventListener('click', ()=>{
+//   if(todoInput.value){
+//     let todoItem = document.createElement('li');
+//     todoItem.innerHTML = todoInput.value;
+
+//     let xmark = document.createElement('span');
+//     xmark.className = 'del'
+//     xmark.innerHTML = 'X';
+//     todoItem.append(xmark)
+
+//     todoUl.appendChild(todoItem)
+//   }
+
+//   todoInput.value = '';
+
+
+//   let del = document.querySelector
+// })
+
+
+
+let btn2 = document.getElementById('btn2')
+
+btn2.addEventListener('click', ()=>{
+  let purple = document.querySelector('.purple');
+  purple.classList.toggle('blue')
+});
+
+
+let dblclick = document.querySelector('.dblclick button');
+dblclick.addEventListener('click', (e)=>{
+  console.log('double click event fired');
+  console.log(e.target.textContent);
+
 })

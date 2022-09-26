@@ -7,3 +7,36 @@
     display: grid;
     justify-content: space-around;   
 } */
+
+/* .container{
+    background-color: blueviolet;
+} */
+.purple{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    transition: 9s ease-in-out;
+}
+.blue{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: 9s ease-in-out;
+    background-color: blue;
+    animation-name: trax;
+    animation-duration: 9s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes trax{
+    from{
+        /* transform: translateX(0px); */
+        transform: scale(0);
+
+    }
+    to{
+        /* transform: translateX(500px); */
+        transform: scale(2);
+    }
+}
