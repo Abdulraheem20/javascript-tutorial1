@@ -1692,7 +1692,8 @@ victor.append(content);
 
 /////////////     ASS     //////////////////
 let div = document.querySelector('.num-100');
-// let div = document.getElementById('divContainer');
+let input = document.getElementById('input');
+let submitValue = document.querySelector('#divForm button')
 div.style.backgroundColor = 'black';
 div.style.display = 'grid';
 // div.style.justifyContent = 'spaceAround'
@@ -1703,27 +1704,51 @@ div.style.borderRadius = '30px';
 div.style.paddingLeft = '50px';
 div.style.paddingRight = '50px';
 
+submitValue.addEventListener('click', (e)=>{
+  e.preventDefault()
+  for(i = 1; i <= input.value; i++){
+    let values100 = document.createElement('h1');
+    values100.style.textAlign = 'center';
+    values100.style.width = '100px';
+    values100.style.height = '100px';
+    values100.style.padding = '50px';
+    values100.style.fontSize = '50px'
+    values100.style.border = '10px solid white'
+    // values100.style.display = 'inline';
+    // values100.style.justifyContent = 'spaceBetween'
+  
+    document.getElementById('divContainer').appendChild(values100);
+    if(i % 2 == 0){
+    values100.textContent = i;
+    values100.style.backgroundColor = 'green';
+   } else{
+    values100.textContent = i;
+    values100.style.backgroundColor = 'yellow';
+  };
+  };
+})
 
-for(i = 1; i <= 100; i++){
-  let values100 = document.createElement('span');
-  values100.style.textAlign = 'center';
-  values100.style.width = '100px';
-  values100.style.height = '100px';
-  values100.style.padding = '50px';
-  values100.style.fontSize = '50px'
-  values100.style.border = '10px solid white'
-  // values100.style.display = 'inline';
-  // values100.style.justifyContent = 'spaceBetween'
 
-  document.getElementById('divContainer').appendChild(values100);
-  if(i % 2 == 0){
-  values100.textContent = i;
-  values100.style.backgroundColor = 'green';
- } else{
-  values100.textContent = i;
-  values100.style.backgroundColor = 'yellow';
-};
-};
+// for(i = 1; i <= input.value; i++){
+//   let values100 = document.createElement('span');
+//   values100.style.textAlign = 'center';
+//   values100.style.width = '100px';
+//   values100.style.height = '100px';
+//   values100.style.padding = '50px';
+//   values100.style.fontSize = '50px'
+//   values100.style.border = '10px solid white'
+//   // values100.style.display = 'inline';
+//   // values100.style.justifyContent = 'spaceBetween'
+
+//   document.getElementById('divContainer').appendChild(values100);
+//   if(i % 2 == 0){
+//   values100.textContent = i;
+//   values100.style.backgroundColor = 'green';
+//  } else{
+//   values100.textContent = i;
+//   values100.style.backgroundColor = 'yellow';
+// };
+// };
 
 /////// 26-09-2022 ///////////////////
 ///////EVENTS
@@ -1749,29 +1774,39 @@ for(let i = 0; i<myImages.length; i++){
 }
 
 
-// let todoInput = document.querySelector('.to-do input');
-// let todoBtn = document.querySelector('.to-do button');
-// let todoUl = document.querySelector('.to-do ul');
+let todoInput = document.querySelector('.to-do input');
+let todoBtn = document.querySelector('.to-do button');
+let todoUl = document.querySelector('.to-do ul');
 
 
-// todoBtn.addEventListener('click', ()=>{
-//   if(todoInput.value){
-//     let todoItem = document.createElement('li');
-//     todoItem.innerHTML = todoInput.value;
+todoBtn.addEventListener('click', ()=>{
+  if(todoInput.value){
+    let todoItem = document.createElement('li');
+    todoItem.innerHTML = todoInput.value;
 
-//     let xmark = document.createElement('span');
-//     xmark.className = 'del'
-//     xmark.innerHTML = 'X';
-//     todoItem.append(xmark)
+    let xmark = document.createElement('span');
+    xmark.className = 'del'
+    xmark.innerHTML = 'X';
+    todoItem.append(xmark)
 
-//     todoUl.appendChild(todoItem)
-//   }
+    todoUl.appendChild(todoItem);
+//     function del(){
+//       todoItem.style.textDecoration = "lineThrough"
+//     }
+//     document.querySelector('.del').onclick = function (){
+//   del()
+// };
 
-//   todoInput.value = '';
+  
+
+  }
+
+  todoInput.value = '';
 
 
-//   let del = document.querySelector
-// })
+  // let del = document.querySelector
+})
+
 
 
 
@@ -1788,4 +1823,13 @@ dblclick.addEventListener('click', (e)=>{
   console.log('double click event fired');
   console.log(e.target.textContent);
 
+});
+
+const inputBlur = document.querySelector('.blurclick input');
+const ptag = document.querySelector('.blurclick p');
+
+inputBlur.addEventListener('blur', ()=>{
+  ptag.textContent = 'this field is required';
+  ptag.style.color = "red";
 })
+ 
