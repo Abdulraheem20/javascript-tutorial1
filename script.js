@@ -1726,6 +1726,7 @@ submitValue.addEventListener('click', (e)=>{
     values100.style.backgroundColor = 'yellow';
   };
   };
+  input.value = '';
 })
 
 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./api.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>Let's make API call!</h1>
+    <div class="container">
+        <h4 class="kanyeAPI"></h4>
+    </div>
+    <h4 class="jokeAPI"></h4>
+    <form action="">
+        <div class="container">
+            <div class="category border rounded ">
+                <div class="container radio">
+                <p>Pls pick <span class=""><b>category/ categories:</b></span> </p>
+                <input type="radio" name="category" id="any" value="Any" checked>
+                <label for="checkbox">Any</label> <br>
+                <input type="radio" name="category" id="custom" value="Custom" >
+                <label for="checkbox">Custom:</label> <br>
+                </div>
+                <input type="checkbox" class="input">
+                <label for="checkbox">Programming</label>
+                <input type="checkbox" class="input">
+                <label for="checkbox">Misc</label>
+                <input type="checkbox" class="input">
+                <label for="checkbox">Dark</label>
+                <input type="checkbox" class="input">
+                <label for="checkbox">Pun</label>
+                <input type="checkbox" class="input">
+                <label for="checkbox">Spooky</label>
+                <input type="checkbox" class="input">
+                <label for="checkbox">Christmas</label>
+            </div>
+            <div class="category border rounded ">
+                <p>Pls select <span class=""><b>joke type:</b></span> </p>
+                <input type="checkbox" class="input">
+                <label for="checkbox">single</label>
+                <input type="checkbox" class="input">
+                <label for="checkbox">twopart</label>
+            </div>
+            <h4 class="requestedJoke"></h4>
+            <!-- <div class="category border rounded ">
+                <p>Pls select <span class=""><b>amount:</b></span> </p>
+                <input type="number">
+            </div> -->
+            <button id="jokeRequest">Send request</button>
+        </div>
+    </form>
+
+    <div class="weatherValue">
+        <h1 id="weathval"></h1>
+
+        <input type="text" placeholder="city name">
+        <button id="weather">Search weather</button>
+        <p class="location"></p>
+        <p class="weather-condition"></p>
+    </div>
+    <div class="placeholder">
+
+    </div>
+
+    <div class="main-container">
+
+        <h3 class="error"></h3>
+
+    </div>
+    <button class="minus">-</button>
+    <h1>0</h1>
+    <button class="plus">+</button>
+    <span>0</span>
+    <button>Add to cart</button>
+    <div class="cartDisplay">
+        <p>You just added some goods</p>
+    </div>
+
+    
+
+</body>
+<script src="./api.js"></script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+</html>

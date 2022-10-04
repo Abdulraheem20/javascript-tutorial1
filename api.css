@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=La+Belle+Aurore&display=swap');
+
+
+body{
+    background-color:azure;
+}
+/* .main-container{
+    display: flex;
+    flex-wrap: wrap;
+} */
+.sub-container h3{
+    color: blue;
+    text-transform: uppercase;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 10px;
+   
+}
+.image1{
+   margin-left: auto;
+   margin-right: auto;
+   /* border: 1px solid rgb(6, 123, 219);
+   border-radius: 10px; */
+   display: block;
+   width: 100px;
+
+}
+h4{
+    border: 1px solid  rgb(6, 123, 219);
+    text-align: center;
+    /* width: 40%;  */
+    border-radius: 10px;
+    padding: 10px;
+}
+.addcart{
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(6, 123, 219);
+    color: white;
+    border: 1px;
+}
+.main-container{
+    display: flex;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    justify-content: center;
+    flex-wrap: wrap;
+
+    /* background-color: black */
+    /* flex-wrap: wrap; */
+}
+.sub-container{
+    /* border: 1px red solid; */
+    border-radius: 10px;
+    padding: 10px;
+    background-color:white;
+    box-shadow: 2px 2px 2px;
+    margin: 10px;
+    font-family: 'Acme', sans-serif;
+    
+}
+.fa-regular .fa-backpack{
+    color: gold;
+}
+/* .icons{
+    display: grid;
+    line-height: 1.5;
+} */
+
+.cartDisplay{
+    width: 200px;
+    background-color: bisque;
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px;
+}
